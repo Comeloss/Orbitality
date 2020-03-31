@@ -8,6 +8,9 @@ namespace Features.Game
     {
         public GameplayFeature(Contexts contexts)
         {
+            Add(new InitGamePlayStateSystem());
+            Add(new SwitchGamePlayStateSystem(contexts));
+            
             Add(new InitSpaceSystem());
             Add(new InitProjectileCannonsSystem(contexts));
             
@@ -28,8 +31,7 @@ namespace Features.Game
             Add(new ShootProjectileSystem(contexts));
             Add(new LifeTimeSystem(contexts));
             Add(new UpdateProjectilesLifeTimeSystem(contexts));
-            
-            
+            Add(new CooldownSystem(contexts));
             
             Add(new HandleCollisionSystem(contexts));
             

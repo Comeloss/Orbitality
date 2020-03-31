@@ -8,36 +8,38 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int CannonCooldown = 0;
+    public const int Cooldown = 0;
     public const int Force = 1;
     public const int GameDeltaTime = 2;
-    public const int GameTime = 3;
-    public const int GameTimeMilliseconds = 4;
-    public const int GravitationalConstant = 5;
-    public const int GravityVelocity = 6;
-    public const int Health = 7;
-    public const int LifeTime = 8;
-    public const int Mass = 9;
-    public const int OrbitalMagnitude = 10;
-    public const int PlanetInfo = 11;
-    public const int PlanetTrajectory = 12;
-    public const int Player = 13;
-    public const int Position = 14;
-    public const int ProjectileCannon = 15;
-    public const int ProjectileCannonType = 16;
-    public const int Projectile = 17;
-    public const int ProjectilesTotalShoot = 18;
-    public const int ReadyToDestroy = 19;
-    public const int Speed = 20;
-    public const int StartVelocity = 21;
-    public const int Velocity = 22;
+    public const int GamePlayState = 3;
+    public const int GameTime = 4;
+    public const int GameTimeMilliseconds = 5;
+    public const int GravitationalConstant = 6;
+    public const int GravityVelocity = 7;
+    public const int Health = 8;
+    public const int LifeTime = 9;
+    public const int Mass = 10;
+    public const int OrbitalMagnitude = 11;
+    public const int PlanetInfo = 12;
+    public const int PlanetTrajectory = 13;
+    public const int Player = 14;
+    public const int Position = 15;
+    public const int ProjectileCannon = 16;
+    public const int ProjectileCannonType = 17;
+    public const int Projectile = 18;
+    public const int ProjectilesTotalShoot = 19;
+    public const int ReadyToDestroy = 20;
+    public const int Speed = 21;
+    public const int StartVelocity = 22;
+    public const int Velocity = 23;
 
-    public const int TotalComponents = 23;
+    public const int TotalComponents = 24;
 
     public static readonly string[] componentNames = {
-        "CannonCooldown",
+        "Cooldown",
         "Force",
         "GameDeltaTime",
+        "GamePlayState",
         "GameTime",
         "GameTimeMilliseconds",
         "GravitationalConstant",
@@ -61,9 +63,10 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(CannonCooldownComponent),
+        typeof(CooldownComponent),
         typeof(ForceComponent),
         typeof(GameDeltaTimeComponent),
+        typeof(GamePlayStateComponent),
         typeof(GameTimeComponent),
         typeof(GameTimeMillisecondsComponent),
         typeof(GravitationalConstantComponent),

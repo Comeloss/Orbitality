@@ -9,7 +9,12 @@ public class TriggerFireComponent : IComponent
 [Input]
 public class CollisionComponent : IComponent
 {
-    public int ProjectileId;
-    public int ProjectileLauncherId;
-    public int TargetId;
+ public int ProjectileId;
+ public int ProjectileLauncherId;
+ public int TargetId;
+}
+ 
+[Input]
+public class SwitchGamePlayStateComponent : IComponent
+{
 }

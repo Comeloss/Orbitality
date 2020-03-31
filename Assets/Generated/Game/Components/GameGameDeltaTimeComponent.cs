@@ -12,22 +12,22 @@ public partial class GameContext {
     public GameDeltaTimeComponent gameDeltaTime { get { return gameDeltaTimeEntity.gameDeltaTime; } }
     public bool hasGameDeltaTime { get { return gameDeltaTimeEntity != null; } }
 
-    public GameEntity SetGameDeltaTime(float newTimeDelta, float newTimeSinceStartup) {
+    public GameEntity SetGameDeltaTime(float newTimeDelta) {
         if (hasGameDeltaTime) {
             throw new Entitas.EntitasException("Could not set GameDeltaTime!\n" + this + " already has an entity with GameDeltaTimeComponent!",
                 "You should check if the context already has a gameDeltaTimeEntity before setting it or use context.ReplaceGameDeltaTime().");
         }
         var entity = CreateEntity();
-        entity.AddGameDeltaTime(newTimeDelta, newTimeSinceStartup);
+        entity.AddGameDeltaTime(newTimeDelta);
         return entity;
     }
 
-    public void ReplaceGameDeltaTime(float newTimeDelta, float newTimeSinceStartup) {
+    public void ReplaceGameDeltaTime(float newTimeDelta) {
         var entity = gameDeltaTimeEntity;
         if (entity == null) {
-            entity = SetGameDeltaTime(newTimeDelta, newTimeSinceStartup);
+            entity = SetGameDeltaTime(newTimeDelta);
         } else {
-            entity.ReplaceGameDeltaTime(newTimeDelta, newTimeSinceStartup);
+            entity.ReplaceGameDeltaTime(newTimeDelta);
         }
     }
 
@@ -49,19 +49,17 @@ public partial class GameEntity {
     public GameDeltaTimeComponent gameDeltaTime { get { return (GameDeltaTimeComponent)GetComponent(GameComponentsLookup.GameDeltaTime); } }
     public bool hasGameDeltaTime { get { return HasComponent(GameComponentsLookup.GameDeltaTime); } }
 
-    public void AddGameDeltaTime(float newTimeDelta, float newTimeSinceStartup) {
+    public void AddGameDeltaTime(float newTimeDelta) {
         var index = GameComponentsLookup.GameDeltaTime;
         var component = CreateComponent<GameDeltaTimeComponent>(index);
         component.TimeDelta = newTimeDelta;
-        component.TimeSinceStartup = newTimeSinceStartup;
         AddComponent(index, component);
     }
 
-    public void ReplaceGameDeltaTime(float newTimeDelta, float newTimeSinceStartup) {
+    public void ReplaceGameDeltaTime(float newTimeDelta) {
         var index = GameComponentsLookup.GameDeltaTime;
         var component = CreateComponent<GameDeltaTimeComponent>(index);
         component.TimeDelta = newTimeDelta;
-        component.TimeSinceStartup = newTimeSinceStartup;
         ReplaceComponent(index, component);
     }
 

@@ -23,38 +23,50 @@ namespace Views.SolarSystem
             ObserveEntityWithComponents(
                 GameMatcher.PlanetInfo,
                 entity => entity.planetInfo,
-                entit => entit.Id.ToString() == ViewId,
+                entity => entity.Id.ToString() == ViewId,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdateInfoData);
             
             ObserveEntityWithComponents(
                 GameMatcher.ProjectileCannon,
                 entity => entity,
-                entit => entit.hasPlanetInfo && entit.planetInfo.Id.ToString() == ViewId,
+                entity => entity.hasPlanetInfo && entity.planetInfo.Id.ToString() == ViewId,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(CreateCannon);
             
             ObserveEntityWithComponents(
                 GameMatcher.Position,
                 entity => entity,
-                entit => entit.hasPlanetInfo && entit.planetInfo.Id.ToString() == ViewId,
+                entity => entity.hasPlanetInfo && entity.planetInfo.Id.ToString() == ViewId,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdatePositionData);
             
             ObserveEntityWithComponents(
                 GameMatcher.StartVelocity,
                 entity => entity,
-                entit => entit.hasPlanetInfo && entit.planetInfo.Id.ToString() == ViewId,
+                entity => entity.hasPlanetInfo && entity.planetInfo.Id.ToString() == ViewId,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdateOrbitalVectorData);
             
             ObserveEntityWithComponents(
                 GameMatcher.GravityVelocity,
                 entity => entity,
-                entit => entit.hasPlanetInfo && entit.planetInfo.Id.ToString() == ViewId,
+                entity => entity.hasPlanetInfo && entity.planetInfo.Id.ToString() == ViewId,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdateGravityVectorData);
             
             ObserveEntityWithComponents(
                 GameMatcher.Velocity,
                 entity => entity,
-                entit => entit.hasPlanetInfo && entit.planetInfo.Id.ToString() == ViewId,
+                entity => entity.hasPlanetInfo && entity.planetInfo.Id.ToString() == ViewId,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdateResultVectorData);
+            
+            ObserveEntityWithComponents(
+                GameMatcher.Health,
+                entity => entity,
+                entity => entity.hasPlanetInfo && entity.planetInfo.Id.ToString() == ViewId,
+                additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdateHealthData);
+            
+            ObserveEntityWithComponents(
+                GameMatcher.Cooldown,
+                entity => entity,
+                entity => entity.hasPlanetInfo && entity.planetInfo.Id.ToString() == ViewId,
+                additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdateCooldownData);
         }
 
         public void Init(int id)
@@ -68,6 +80,31 @@ namespace Views.SolarSystem
         public int GetPlanetId()
         {
             return _planetId;
+        }
+
+        private void UpdateHealthData(GameEntity entity)
+        {
+            if (!_healthBar)
+            {
+                return;
+            }
+
+            if (!_healthBar.gameObject.activeSelf)
+            {
+                _healthBar.gameObject.SetActive(true);
+            }
+
+            _healthBar.UpdateBar(entity.health.Proportion);
+        }
+        
+        private void UpdateCooldownData(GameEntity entity)
+        {
+            if (!_cooldownBar)
+            {
+                return;
+            }
+
+            _cooldownBar.UpdateBar(entity.cooldown.Proportion);
         }
 
         private void UpdateInfoData(PlanetInfoComponent component)
@@ -89,6 +126,16 @@ namespace Views.SolarSystem
 
             _cannon = Instantiate(_cannonTranform, transform);
             _cannon.ViewId = ViewId;
+            
+            if (!_cooldownBar)
+            {
+                return;
+            }
+
+            if (!_cooldownBar.gameObject.activeSelf)
+            {
+                _cooldownBar.gameObject.SetActive(true);
+            }
         }
 
         private void UpdatePositionData(GameEntity entity)

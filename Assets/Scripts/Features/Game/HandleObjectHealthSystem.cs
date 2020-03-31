@@ -20,7 +20,7 @@ namespace Features.Game
         protected override bool Filter(GameEntity entity)
         {
             return entity.hasHealth && 
-                entity.health.Hp <= 0;
+                entity.health.CurrentHp <= 0;
         }
 
         protected override void Execute(List<GameEntity> entities)

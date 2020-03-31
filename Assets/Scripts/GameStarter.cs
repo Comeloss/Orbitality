@@ -17,14 +17,7 @@ public class GameStarter : MonoBehaviour
     {
         _systems = CreateSystems(_contexts);
 
-        try
-        {
-            _systems.Initialize();
-        }
-        catch
-        {
-            // ignored
-        }
+        _systems.Initialize();
     }
 
     // Update is called once per frame
@@ -35,15 +28,8 @@ public class GameStarter : MonoBehaviour
     
     void UpdateSystems()
     {
-        try
-        {
-            _systems.Execute();
-            _systems.Cleanup();
-        }
-        catch
-        {
-            // ignored
-        }
+        _systems.Execute();
+        _systems.Cleanup();
     }
     
     Systems CreateSystems(Contexts contexts)

@@ -8,7 +8,7 @@ namespace Features.Game.Gravity
     {
         private readonly Contexts _contexts;
 
-        private float koef = 0.005f;
+        private float koef = 5f;
         
         public UpdatePlanetsVelocitySystem(Contexts context) : base(context.game)
         {

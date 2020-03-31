@@ -59,14 +59,14 @@ namespace Features.Game.Projectile
                     continue;
                 }
 
-                var newHealth = targetPlanet.health.Hp - projectile.projectile.Damage;
+                var newHealth = targetPlanet.health.CurrentHp - projectile.projectile.Damage;
 
                 if (newHealth < 0)
                 {
                     newHealth = 0;
                 }
 
-                targetPlanet.ReplaceHealth(newHealth);
+                targetPlanet.ReplaceHealth(newHealth,  targetPlanet.health.TotalHp);
             }
         }
     }

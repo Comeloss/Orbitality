@@ -16,20 +16,26 @@ namespace Features.Game.GameTime
         {
             _contexts.game.ReplaceGameTime(0);
             _contexts.game.ReplaceGameTimeMilliseconds(0);
-            _contexts.game.ReplaceGameDeltaTime(Time.realtimeSinceStartup, 0);
+            _contexts.game.ReplaceGameDeltaTime(Time.time);
         }
         
         public void Execute()
         {
-            _contexts.game.ReplaceGameTimeMilliseconds((long)(Time.realtimeSinceStartup * 1000));
-            
-            if (Time.realtimeSinceStartup - _contexts.game.gameTime.Time >= 1f)
+            if (_contexts.game.gamePlayState.CurrentState == GamePlayStateComponent.GamePlayStateType.Pause)
             {
-                _contexts.game.ReplaceGameTime((long)Time.realtimeSinceStartup);
+                return;
             }
+
+            _contexts.game.ReplaceGameDeltaTime(Time.deltaTime);
+
+            var gameTimeMilliseconds = _contexts.game.gameTimeMilliseconds.Time + _contexts.game.gameDeltaTime.TimeDelta; 
             
-            var lastTime = _contexts.game.gameDeltaTime;
-            _contexts.game.ReplaceGameDeltaTime(Time.realtimeSinceStartup - lastTime.TimeSinceStartup, Time.realtimeSinceStartup);
+            _contexts.game.ReplaceGameTimeMilliseconds(gameTimeMilliseconds);
+            
+            if (gameTimeMilliseconds - _contexts.game.gameTime.Time >= 1f)
+            {
+                _contexts.game.ReplaceGameTime((long)gameTimeMilliseconds);
+            }
         }
     }
 }

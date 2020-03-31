@@ -12,7 +12,7 @@ public partial class GameContext {
     public GameTimeMillisecondsComponent gameTimeMilliseconds { get { return gameTimeMillisecondsEntity.gameTimeMilliseconds; } }
     public bool hasGameTimeMilliseconds { get { return gameTimeMillisecondsEntity != null; } }
 
-    public GameEntity SetGameTimeMilliseconds(long newTime) {
+    public GameEntity SetGameTimeMilliseconds(float newTime) {
         if (hasGameTimeMilliseconds) {
             throw new Entitas.EntitasException("Could not set GameTimeMilliseconds!\n" + this + " already has an entity with GameTimeMillisecondsComponent!",
                 "You should check if the context already has a gameTimeMillisecondsEntity before setting it or use context.ReplaceGameTimeMilliseconds().");
@@ -22,7 +22,7 @@ public partial class GameContext {
         return entity;
     }
 
-    public void ReplaceGameTimeMilliseconds(long newTime) {
+    public void ReplaceGameTimeMilliseconds(float newTime) {
         var entity = gameTimeMillisecondsEntity;
         if (entity == null) {
             entity = SetGameTimeMilliseconds(newTime);
@@ -49,14 +49,14 @@ public partial class GameEntity {
     public GameTimeMillisecondsComponent gameTimeMilliseconds { get { return (GameTimeMillisecondsComponent)GetComponent(GameComponentsLookup.GameTimeMilliseconds); } }
     public bool hasGameTimeMilliseconds { get { return HasComponent(GameComponentsLookup.GameTimeMilliseconds); } }
 
-    public void AddGameTimeMilliseconds(long newTime) {
+    public void AddGameTimeMilliseconds(float newTime) {
         var index = GameComponentsLookup.GameTimeMilliseconds;
         var component = CreateComponent<GameTimeMillisecondsComponent>(index);
         component.Time = newTime;
         AddComponent(index, component);
     }
 
-    public void ReplaceGameTimeMilliseconds(long newTime) {
+    public void ReplaceGameTimeMilliseconds(float newTime) {
         var index = GameComponentsLookup.GameTimeMilliseconds;
         var component = CreateComponent<GameTimeMillisecondsComponent>(index);
         component.Time = newTime;

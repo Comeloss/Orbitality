@@ -21,22 +21,18 @@ namespace Features.Game.Projectile
 
         protected override bool Filter(InputEntity entity)
         {
-            return true;
+            return entity.hasTriggerFire &&
+                   _contexts.game.gamePlayState.CurrentState == GamePlayStateComponent.GamePlayStateType.Play;
         }
 
         protected override void Execute(List<InputEntity> entities)
         {
             foreach (var inputEntity in entities)
             {
-                if (!inputEntity.hasTriggerFire)
-                {
-                    continue;
-                }
-
                 var cannon = _contexts.game.GetGroup(GameMatcher.ProjectileCannon)
                     .FirstOrDefault(x => x.projectileCannon.CannonId == inputEntity.triggerFire.PlaneId && x.hasPosition);
-
-                if (cannon == null)
+                
+                if (cannon == null || (cannon.hasCooldown && cannon.cooldown.IsCoolingDown))
                 {
                     continue;
                 }
@@ -58,8 +54,10 @@ namespace Features.Game.Projectile
                         
                 projectile.ReplaceMass(cannon.projectileCannon.ProjectileMass);
                 projectile.ReplaceLifeTime(cannon.projectileCannon.ProjectileMaxLifeTime);
-                        
-                cannon.ReplaceCannonCooldown(cannon.projectileCannon.ProjectileCooldown);
+
+                var cooldown = cannon.projectileCannon.ProjectileCooldown;
+                
+                cannon.ReplaceCooldown(cooldown, cooldown, true);
             }
         }
     }

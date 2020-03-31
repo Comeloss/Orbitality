@@ -14,19 +14,19 @@ namespace Features.Game.Gravity
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
         {
-            return context.CreateCollector(GameMatcher.StartVelocity);
+            return context.CreateCollector(GameMatcher.GameTimeMilliseconds);
         }
 
         protected override bool Filter(GameEntity entity)
         {
-            return entity.hasStartVelocity;
+            return entity.hasGameTimeMilliseconds;
         }
 
         protected override void Execute(List<GameEntity> entities)
         {
-            //var velocityObjects = _contexts.game.GetGroup(GameMatcher.OrbitalVelocity);//.Where(x => x.hasPosition);
+            var velocityObjects = _contexts.game.GetGroup(GameMatcher.StartVelocity);
             
-            foreach (var gameEntity in entities)
+            foreach (var gameEntity in velocityObjects)
             {
                 var resultVelocity =  gameEntity.startVelocity.Velocity;
 

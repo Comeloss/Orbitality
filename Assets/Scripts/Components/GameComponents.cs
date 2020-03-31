@@ -44,14 +44,13 @@ public class GameTimeComponent : IComponent
 [Game, Unique]
 public class GameTimeMillisecondsComponent : IComponent
 {
-    public long Time;
+    public float Time;
 }
 
 [Game, Unique]
 public class GameDeltaTimeComponent : IComponent
 {
     public float TimeDelta { get; set; }
-    public float TimeSinceStartup { get; set; }
 }
 
 [Game, Unique]
@@ -69,7 +68,9 @@ public class OrbitalMagnitudeComponent : IComponent
 [Game]
 public class HealthComponent : IComponent
 {
-    public int Hp; 
+    public int CurrentHp;
+    public int TotalHp;
+    public float Proportion => (float)CurrentHp / TotalHp;
 }
 
 [Game]
@@ -155,9 +156,24 @@ public class PlayerComponent : IComponent
 }
 
 [Game]
-public class CannonCooldownComponent : IComponent
+public class CooldownComponent : IComponent
 {
     public float Cooldown;
+    public float TimeLeft;
+    public bool IsCoolingDown;
+    public float Proportion => TimeLeft / Cooldown;
+}
+
+[Game, Unique]
+public class GamePlayStateComponent : IComponent
+{
+    public enum GamePlayStateType
+    {
+        Play,
+        Pause
+    }
+
+    public GamePlayStateType CurrentState;
 }
 
 [Game]

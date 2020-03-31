@@ -25,7 +25,7 @@ namespace Features.Game.Projectile
 
         protected override void Execute(List<GameEntity> entities)
         {
-            var timedEntities = _contexts.game.GetGroup(GameMatcher.LifeTime);
+            var timedEntities = _contexts.game.GetGroup(GameMatcher.LifeTime).Where(l => !l.lifeTime.TimeEnded);
 
             foreach (var gameEntity in timedEntities)
             {

@@ -27,7 +27,7 @@ namespace Features.Game
             planet1.ReplacePlanetTrajectory(80, 100, 0, 0, 0.3f);
             planet1.ReplaceProjectileCannonType(ProjectileCannonType.Heavy);
             planet1.ReplaceMass(3000);
-            planet1.ReplaceHealth(100);
+            planet1.ReplaceHealth(100, 100);
 
             Contexts.sharedInstance.game.ReplacePlayer(1);
             
@@ -39,7 +39,7 @@ namespace Features.Game
             planet2.ReplacePlanetTrajectory(150, 150, 0, 0, 0.25f);
             planet2.ReplaceProjectileCannonType(ProjectileCannonType.Heavy);
             planet2.ReplaceMass(5000);
-            planet2.ReplaceHealth(100);
+            planet2.ReplaceHealth(100, 100);
             
             var planet3 = Contexts.sharedInstance.game.CreateEntity();
             
@@ -48,7 +48,7 @@ namespace Features.Game
             planet3.ReplacePlanetInfo("Jupiter", 3, planet3Sprite, 8);
             planet3.ReplacePlanetTrajectory(350, 250, 50, 0, 0.15f);
             planet3.ReplaceProjectileCannonType(ProjectileCannonType.Frequent);
-            planet3.ReplaceHealth(100);
+            planet3.ReplaceHealth(100, 100);
             planet3.ReplaceMass(6000);
             
             var planet4 = Contexts.sharedInstance.game.CreateEntity();
@@ -58,7 +58,7 @@ namespace Features.Game
             planet4.ReplacePlanetInfo("Pluto", 4, planet4Sprite, 6);
             planet4.ReplacePlanetTrajectory(280, 200, -50, -50, 0.1f);
             planet4.ReplaceProjectileCannonType(ProjectileCannonType.Fast);
-            planet4.ReplaceHealth(100);
+            planet4.ReplaceHealth(100, 100);
             planet4.ReplaceMass(4000);
         }
     }

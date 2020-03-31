@@ -29,14 +29,6 @@ namespace Features.Game.Gravity
         {
             foreach (var projectileEntity in entities)
             {
-                /*var orbitMagnitude = projectileEntity.gravityVelocity.Velocity.magnitude * projectileEntity.orbitalMagnitude.Magnitude;
-                
-                
-                var orbitalVelocity = orbitMagnitude * 
-                                      (!projectileEntity.hasVelocity ? 
-                                          Vector2.Perpendicular(projectileEntity.gravityVelocity.Velocity).normalized : 
-                                          projectileEntity.velocity.Velocity.normalized);*/
-
                 var newStartVelocity = projectileEntity.velocity.Velocity;
 
                 projectileEntity.ReplaceStartVelocity(newStartVelocity);
