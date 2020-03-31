@@ -2,32 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="defcba6e-c752-4a1f-93ff-e42e3607f3e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Content/Resources/PlanetsData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/Resources/PlanetsData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Generated/Game/Components/GameBotAiComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Generated/Game/Components/GameBotAiComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Generated/Game/Components/GameBotsClockComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Generated/Game/Components/GameBotsClockComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Bots.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Bots/FastCannonBotBehaviourSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Bots/FastCannonBotBehaviourSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Bots/HeavyCannonBotsBehaviourSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Bots/HeavyCannonBotsBehaviourSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Bots/UpdateBotsBehaviourSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Bots/UpdateBotsBehaviourSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Bots/UpdateBotsClockSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Bots/UpdateBotsClockSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/PlanetsScriptableObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/PlanetsScriptableObject.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Orbitality/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Orbitality/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Orbitality/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Orbitality/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Orbitality/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Orbitality/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Content/Prefabs/Planet/Planet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Prefabs/Planet/Planet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Generated/Game/Components/GameCannonCooldownComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Generated/Game/Components/GameCannonCooldownComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Generated/Game/Components/GameGameDeltaTimeComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Generated/Game/Components/GameGameDeltaTimeComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Generated/Game/Components/GameGameTimeMillisecondsComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Generated/Game/Components/GameGameTimeMillisecondsComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Generated/Game/Components/GameHealthComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Generated/Game/Components/GameHealthComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Prefabs/Projectile/Projectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Prefabs/Projectile/Projectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Resources.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources/Planets.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Planets.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources/Planets.spriteatlas.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Planets.spriteatlas.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources/planet1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/planet1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources/planet1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/planet1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources/planet2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/planet2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources/planet2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/planet2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources/planet3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/planet3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources/planet3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/planet3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources/planet4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/planet4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources/planet4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/planet4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources/planet5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/planet5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources/planet5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/planet5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources/planet6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/planet6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources/planet6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/planet6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources/sun.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Resources/sun.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Sprites/Planets/Resources/sun.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Sprites/Resources/sun.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generated/Game/Components/GamePlayerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Generated/Game/Components/GamePlayerComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Generated/Game/GameComponentsLookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Generated/Game/GameComponentsLookup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Generated/Input/InputComponentsLookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Generated/Input/InputComponentsLookup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Orbitality/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Orbitality/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generated/Input/Components/InputTriggerFireComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Generated/Input/Components/InputTriggerFireComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/GameComponents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/GameComponents.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/InputComponents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/InputComponents.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Game/GameFeature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/GameFeature.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Game/GameTime/TimeSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/GameTime/TimeSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdatePlanetsVelocitySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdatePlanetsVelocitySystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateProjectileStartVelocitySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateProjectileStartVelocitySystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateVelocitySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateVelocitySystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Game/HandleObjectHealthSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/HandleObjectHealthSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Game/InitSpaceSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/InitSpaceSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/HandleCollisionSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/HandleCollisionSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/LifeTimeSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/LifeTimeSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/InitProjectileCannonsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/InitProjectileCannonsSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/ShootProjectileSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/ShootProjectileSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameStarter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameStarter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/ProgressBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ProgressBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/CannonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/CannonView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/InputSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/InputSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/ProjectileView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ProjectileView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/SolarSystem/PlanetView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/SolarSystem/PlanetView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +73,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/InputSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/ProgressBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/CannonView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Bots/UpdateBotsClockSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/ProjectileView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5AC29B9D-5193-4DD3-9A8D-CE946B9985A7/a3/e9c68acc/Time.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Generated/Game/Components/GameProjectileCannonComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -59,6 +86,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateVelocitySystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/UpdateProjectilesLifeTimeSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/ProjectilesGravitySystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Bots/FastCannonBotBehaviourSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Generated/Game/Components/GameVelocityComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Game/GameFeature.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Game/InitSpaceSystem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -66,14 +94,17 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/ShootProjectileSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateObjectsPositionSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateGravityVelocitySystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/PlanetsScriptableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Generated/Game/Components/GameLifeTimeComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Game/GameTime/TimeSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Bots/UpdateBotsBehaviourSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6EB0F415-921D-4F53-9E66-433DC1147FE2/db/3c6705d6/Systems.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/HandleCollisionSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/UI/PauseButtonView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Generated/Game/Components/GameHealthComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Game/SwitchGamePlayStateSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Game/HandleObjectHealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5AC29B9D-5193-4DD3-9A8D-CE946B9985A7/31/1e04a6cf/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5AC29B9D-5193-4DD3-9A8D-CE946B9985A7/17/4aff0a7a/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/LifeTimeSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Generated/Game/GameComponentsLookup.cs" root0="FORCE_HIGHLIGHTING" />
@@ -81,38 +112,26 @@
     <setting file="file://$PROJECT_DIR$/Assets/Generated/Game/Components/GameForceComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Game/CooldownSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Generated/Game/Components/GameGameTimeMillisecondsComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Bots/FrequentCannonBotBehaviourSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Generated/Game/Components/GameGameDeltaTimeComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Bots/HeavyCannonBotsBehaviourSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/BaseView/ViewBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Input/CleanupInputContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStarter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Game/DestroyEntitiesGameSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Generated/Game/Components/GameGravitationalConstantComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Generated/Game/Components/GamePlanetTrajectoryComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Generated/Game/Components/GameCooldownComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Features/Input/InputFeature.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/InputComponents.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Generated/Game/Components/GameBotAiComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Extensions/DelegateExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IReadyToDestroy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Generated/Input/Components/InputTriggerFireComponent.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6EB0F415-921D-4F53-9E66-433DC1147FE2/db/3c6705d6/Systems.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Time/TimeSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/GravityForceSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Extensions/DelegateExtensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/ReactiveViewBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IReadyToDestroy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/ViewBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/MoveForceSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Generated/Game/Components/GameStartOrbitalSpeedComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/InitPlanetsVelocitySystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateGravityVelocitySystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/InputSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdatePositionSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateVelocityObjectsPositionSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Generated/Game/Components/GamePlanetInfoComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/ProjectileLifeTimeSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Input/CleanupInputSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Input/CleanupInputContext.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/UpdateProjectilesLifeTimeSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/DestroyEntitiesGameSystem.cs" />
@@ -121,32 +140,49 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/GravitySystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateOrbitalVelocitySystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateStartVelocitySystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/InitProjectileCannonsSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Generated/Game/Components/GameProjectileCannonComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/ProjectileView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/CannonView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/HandleCollisionSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/ProgressBar.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/InitSpaceSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/LifeTimeSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/CooldownSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Generated/Game/Components/GameGameDeltaTimeComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Generated/Game/Components/GameGameTimeMillisecondsComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdatePlanetsVelocitySystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/InitGamePlayStateSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/InputComponents.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/GameComponents.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Input/InputFeature.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/GameFeature.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/UI/PauseButtonView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameStarter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/SwitchGamePlayStateSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/GameTime/TimeSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/ShootProjectileSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateProjectileStartVelocitySystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/SolarSystem/PlanetView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/ProjectilesGravitySystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateVelocitySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Planets.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/MyScriptableObjectClass.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/UseMyScriptableObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/MakeScriptableObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InventoryItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InventoryItemList.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InventoryItemEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/CreateInventoryItemList.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/PlanetsScriptableObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/SolarSystem/PlanetView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/CannonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/ProjectileView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/InputSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Generated/Game/Components/GameOpponentAiComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Bots/UpdateBotsClockSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/GameComponents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/InitSpaceSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Bots/HeavyCannonBotBehaviourSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/InputComponents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Bots/UpdateBotsBehaviourSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Bots/HeavyCannonBotsBehaviourSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Bots/FastCannonBotBehaviourSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/GameFeature.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/InitProjectileCannonsSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Features/Bots/FrequentCannonBotBehaviourSystem.cs" />
       </list>
     </option>
   </component>
@@ -171,10 +207,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="31244">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="30888">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="31244" />
+      <option name="pid" value="30888" />
       <method v="2" />
     </configuration>
   </component>
@@ -192,7 +228,9 @@
       <workItem from="1585478256890" duration="3434000" />
       <workItem from="1585485516939" duration="27328000" />
       <workItem from="1585564501845" duration="29107000" />
-      <workItem from="1585641563923" duration="6424000" />
+      <workItem from="1585641563923" duration="7274000" />
+      <workItem from="1585679045677" duration="9000" />
+      <workItem from="1585679073808" duration="12405000" />
     </task>
     <servers />
   </component>
@@ -203,85 +241,85 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="460" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585597927231" />
-    <state width="938" height="160" key="GridCell.Tab.0.bottom" timestamp="1585648049805">
+    <state width="938" height="249" key="GridCell.Tab.0.bottom" timestamp="1585692364990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="160" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585648049805" />
-    <state width="938" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585517941739" />
-    <state width="938" height="160" key="GridCell.Tab.0.center" timestamp="1585648049805">
+    <state width="938" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585692364990" />
+    <state width="938" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585685852372" />
+    <state width="938" height="249" key="GridCell.Tab.0.center" timestamp="1585692364990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="160" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585648049805" />
-    <state width="938" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585517941739" />
-    <state width="938" height="160" key="GridCell.Tab.0.left" timestamp="1585648049805">
+    <state width="938" height="249" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585692364990" />
+    <state width="938" height="249" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585685852372" />
+    <state width="938" height="249" key="GridCell.Tab.0.left" timestamp="1585692364990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="160" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585648049805" />
-    <state width="938" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585517941739" />
-    <state width="938" height="160" key="GridCell.Tab.0.right" timestamp="1585648049805">
+    <state width="938" height="249" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585692364990" />
+    <state width="938" height="249" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585685852372" />
+    <state width="938" height="249" key="GridCell.Tab.0.right" timestamp="1585692364990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="160" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585648049805" />
-    <state width="938" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585517941739" />
-    <state width="938" height="160" key="GridCell.Tab.1.bottom" timestamp="1585648050861">
+    <state width="938" height="249" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585692364990" />
+    <state width="938" height="249" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585685852372" />
+    <state width="938" height="249" key="GridCell.Tab.1.bottom" timestamp="1585692366694">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="160" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585648050861" />
+    <state width="938" height="249" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585692366694" />
     <state width="938" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585517941740" />
-    <state width="938" height="160" key="GridCell.Tab.1.center" timestamp="1585648050860">
+    <state width="938" height="249" key="GridCell.Tab.1.center" timestamp="1585692366694">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="160" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585648050860" />
+    <state width="938" height="249" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585692366694" />
     <state width="938" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585517941740" />
-    <state width="938" height="160" key="GridCell.Tab.1.left" timestamp="1585648050860">
+    <state width="938" height="249" key="GridCell.Tab.1.left" timestamp="1585692366694">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="160" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585648050860" />
+    <state width="938" height="249" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585692366694" />
     <state width="938" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585517941739" />
-    <state width="938" height="160" key="GridCell.Tab.1.right" timestamp="1585648050861">
+    <state width="938" height="249" key="GridCell.Tab.1.right" timestamp="1585692366694">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="160" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585648050861" />
+    <state width="938" height="249" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585692366694" />
     <state width="938" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585517941740" />
-    <state width="938" height="160" key="GridCell.Tab.2.bottom" timestamp="1585648049728">
+    <state width="938" height="249" key="GridCell.Tab.2.bottom" timestamp="1585692364900">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="160" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585648049728" />
+    <state width="938" height="249" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585692364900" />
     <state width="938" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585517941740" />
-    <state width="938" height="160" key="GridCell.Tab.2.center" timestamp="1585648049728">
+    <state width="938" height="249" key="GridCell.Tab.2.center" timestamp="1585692364899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="160" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585648049728" />
+    <state width="938" height="249" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585692364899" />
     <state width="938" height="348" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585517941740" />
-    <state width="938" height="160" key="GridCell.Tab.2.left" timestamp="1585648049728">
+    <state width="938" height="249" key="GridCell.Tab.2.left" timestamp="1585692364899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="160" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585648049728" />
+    <state width="938" height="249" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585692364899" />
     <state width="938" height="348" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585517941740" />
-    <state width="938" height="160" key="GridCell.Tab.2.right" timestamp="1585648049728">
+    <state width="938" height="249" key="GridCell.Tab.2.right" timestamp="1585692364899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="160" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585648049728" />
+    <state width="938" height="249" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585692364899" />
     <state width="938" height="348" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585517941740" />
-    <state width="938" height="160" key="GridCell.Tab.3.bottom" timestamp="1585648049728">
+    <state width="938" height="249" key="GridCell.Tab.3.bottom" timestamp="1585692364900">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="160" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585648049728" />
+    <state width="938" height="249" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585692364900" />
     <state width="938" height="348" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585517941740" />
-    <state width="938" height="160" key="GridCell.Tab.3.center" timestamp="1585648049728">
+    <state width="938" height="249" key="GridCell.Tab.3.center" timestamp="1585692364900">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="160" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585648049728" />
+    <state width="938" height="249" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585692364900" />
     <state width="938" height="348" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585517941740" />
-    <state width="938" height="160" key="GridCell.Tab.3.left" timestamp="1585648049728">
+    <state width="938" height="249" key="GridCell.Tab.3.left" timestamp="1585692364900">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="160" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585648049728" />
+    <state width="938" height="249" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585692364900" />
     <state width="938" height="348" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585517941740" />
-    <state width="938" height="160" key="GridCell.Tab.3.right" timestamp="1585648049728">
+    <state width="938" height="249" key="GridCell.Tab.3.right" timestamp="1585692364900">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="160" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585648049728" />
+    <state width="938" height="249" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585692364900" />
     <state width="938" height="348" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585517941740" />
     <state x="715" y="235" key="RiderGenerateDialog" timestamp="1585646802083">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -291,119 +329,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585571156133" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1585647751130">
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1585689514208">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585647751130" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Views/ProgressBar.cs</url>
-          <line>24</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Views/ProgressBar.cs" initialLine="24">
-            <startOffsets>
-              <option value="601" />
-            </startOffsets>
-            <endOffsets>
-              <option value="622" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Views/ProgressBar.cs</url>
-          <line>23</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Views/ProgressBar.cs" initialLine="23">
-            <startOffsets>
-              <option value="549" />
-            </startOffsets>
-            <endOffsets>
-              <option value="588" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/ProjectilesGravitySystem.cs</url>
-          <line>54</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/ProjectilesGravitySystem.cs" initialLine="54">
-            <startOffsets>
-              <option value="1938" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1981" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateGravityVelocitySystem.cs</url>
-          <line>23</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateGravityVelocitySystem.cs" initialLine="23">
-            <startOffsets>
-              <option value="643" />
-            </startOffsets>
-            <endOffsets>
-              <option value="703" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateProjectileStartVelocitySystem.cs</url>
-          <line>23</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateProjectileStartVelocitySystem.cs" initialLine="23">
-            <startOffsets>
-              <option value="662" />
-            </startOffsets>
-            <endOffsets>
-              <option value="728" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/ShootProjectileSystem.cs</url>
-          <line>52</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Projectile/ShootProjectileSystem.cs" initialLine="52">
-            <startOffsets>
-              <option value="2078" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2135" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateProjectileStartVelocitySystem.cs</url>
-          <line>33</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdateProjectileStartVelocitySystem.cs" initialLine="33">
-            <startOffsets>
-              <option value="978" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1034" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdatePlanetsVelocitySystem.cs</url>
-          <line>48</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Features/Game/Gravity/UpdatePlanetsVelocitySystem.cs" initialLine="48">
-            <startOffsets>
-              <option value="1608" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1656" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585689514208" />
+    <state x="2543" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585685704912" />
   </component>
 </project>

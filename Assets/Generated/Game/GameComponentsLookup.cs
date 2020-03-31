@@ -8,34 +8,38 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int Cooldown = 0;
-    public const int Force = 1;
-    public const int GameDeltaTime = 2;
-    public const int GamePlayState = 3;
-    public const int GameTime = 4;
-    public const int GameTimeMilliseconds = 5;
-    public const int GravitationalConstant = 6;
-    public const int GravityVelocity = 7;
-    public const int Health = 8;
-    public const int LifeTime = 9;
-    public const int Mass = 10;
-    public const int OrbitalMagnitude = 11;
-    public const int PlanetInfo = 12;
-    public const int PlanetTrajectory = 13;
-    public const int Player = 14;
-    public const int Position = 15;
-    public const int ProjectileCannon = 16;
-    public const int ProjectileCannonType = 17;
-    public const int Projectile = 18;
-    public const int ProjectilesTotalShoot = 19;
-    public const int ReadyToDestroy = 20;
-    public const int Speed = 21;
-    public const int StartVelocity = 22;
-    public const int Velocity = 23;
+    public const int BotAi = 0;
+    public const int BotsClock = 1;
+    public const int Cooldown = 2;
+    public const int Force = 3;
+    public const int GameDeltaTime = 4;
+    public const int GamePlayState = 5;
+    public const int GameTime = 6;
+    public const int GameTimeMilliseconds = 7;
+    public const int GravitationalConstant = 8;
+    public const int GravityVelocity = 9;
+    public const int Health = 10;
+    public const int LifeTime = 11;
+    public const int Mass = 12;
+    public const int OrbitalMagnitude = 13;
+    public const int PlanetInfo = 14;
+    public const int PlanetTrajectory = 15;
+    public const int Player = 16;
+    public const int Position = 17;
+    public const int ProjectileCannon = 18;
+    public const int ProjectileCannonType = 19;
+    public const int Projectile = 20;
+    public const int ProjectilesTotalShoot = 21;
+    public const int ReadyToDestroy = 22;
+    public const int Speed = 23;
+    public const int StartVelocity = 24;
+    public const int Velocity = 25;
 
-    public const int TotalComponents = 24;
+    public const int TotalComponents = 26;
 
     public static readonly string[] componentNames = {
+        "BotAi",
+        "BotsClock",
         "Cooldown",
         "Force",
         "GameDeltaTime",
@@ -63,6 +67,8 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(BotAiComponent),
+        typeof(BotsClockComponent),
         typeof(CooldownComponent),
         typeof(ForceComponent),
         typeof(GameDeltaTimeComponent),

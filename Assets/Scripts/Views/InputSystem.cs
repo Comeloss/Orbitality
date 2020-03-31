@@ -6,9 +6,9 @@ namespace Views
     {
         void Update()
         {
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                var playerId = Contexts.sharedInstance.game.player.PlaneId; 
+                var playerId = Contexts.sharedInstance.game.player.PlanetId; 
                 
                 Contexts.sharedInstance.input.CreateEntity().ReplaceTriggerFire(playerId);
             }

@@ -41,10 +41,10 @@ namespace Features.Game.Projectile
                     entity.ReplaceProjectileCannon(id, 20, 40 ,1.5f, 3, 8, 3, Color.red);
                     break;
                 case ProjectileCannonType.Frequent:
-                    entity.ReplaceProjectileCannon(id, 4, 10 ,2f, 0.5f, 5, 1, Color.yellow);
+                    entity.ReplaceProjectileCannon(id, 4, 10 ,2f, 0.2f, 5, 1f, Color.yellow);
                     break;
                 case ProjectileCannonType.Fast:
-                    entity.ReplaceProjectileCannon(id, 10, 20 ,3.5f, 1.2f, 3, 2, Color.blue);
+                    entity.ReplaceProjectileCannon(id, 5, 20 ,3.5f, 1.2f, 3, 2, Color.blue);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);

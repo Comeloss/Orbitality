@@ -152,7 +152,8 @@ public class LifeTimeComponent : IComponent
 [Game, Unique]
 public class PlayerComponent : IComponent
 {
-    public int PlaneId;
+    public int PlanetId;
+    public string PlayerName;
 }
 
 [Game]
@@ -174,6 +175,22 @@ public class GamePlayStateComponent : IComponent
     }
 
     public GamePlayStateType CurrentState;
+}
+
+[Game]
+public class BotAiComponent : IComponent
+{
+    public int ReactionTicks;
+    public int CurrentTick;
+
+    public bool CanAct => ReactionTicks == CurrentTick;
+}
+
+[Game, Unique]
+public class BotsClockComponent : IComponent
+{
+    public float LastTick;
+    public float TickDuration;
 }
 
 [Game]

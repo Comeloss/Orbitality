@@ -28,12 +28,6 @@ namespace Views
                 entity => entity,
                 entity => ValidateProjectile(entity),
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(DestroyProjectile);
-
-            /*ObserveEntityWithComponents(
-                GameMatcher.GravityVelocity,
-                entity => entity,
-                entity => ValidateProjectile(entity),
-                additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdateGravityVectorData);*/
         }
 
         public void Init(int projectilePlanetId, int projectileId, float size, Color col)
@@ -41,7 +35,7 @@ namespace Views
             _projectilePlanetId = projectilePlanetId;
             _projectileId = projectileId;
             transform.localScale = Vector2.one * size;
-            
+            SetProjectileColour(col);
         }
 
         private void SetProjectileColour(Color col)
@@ -52,26 +46,6 @@ namespace Views
             }
 
             _projectileSprite.color = col;
-        }
-
-        private void UpdateGravityVectorData(GameEntity entity)
-        {
-            if (!entity.hasGravityVelocity || !_gravityVector)
-            {
-                return;
-            }
-
-            var scale = _gravityVector.localScale;
-            scale.x = entity.gravityVelocity.Velocity.magnitude;
-            _gravityVector.localScale = scale;
-
-            float angle = Vector2.SignedAngle(entity.gravityVelocity.Velocity, Vector3.right) * -1;
-
-            var rot = _gravityVector.rotation;
-            var rotAngle = rot.eulerAngles;
-            rotAngle.z = angle;
-            rot.eulerAngles = rotAngle;
-            _gravityVector.rotation = rot;
         }
 
         private void UpdateProjectilePositionData(GameEntity entity)
@@ -96,7 +70,7 @@ namespace Views
                    entity.projectile.ProjectileId == _projectileId;
         }
 
-        private void OnCollisionEnter2D(Collision2D other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             var planetView = other.transform.parent.GetComponent<PlanetView>();
             if (planetView != null)

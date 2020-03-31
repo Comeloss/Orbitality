@@ -12,6 +12,8 @@
           <e p="Feature.cs" t="Include" />
           <e p="Game" t="Include">
             <e p="Components" t="Include">
+              <e p="GameBotAiComponent.cs" t="Include" />
+              <e p="GameBotsClockComponent.cs" t="Include" />
               <e p="GameCooldownComponent.cs" t="Include" />
               <e p="GameForceComponent.cs" t="Include" />
               <e p="GameGameDeltaTimeComponent.cs" t="Include" />
@@ -329,6 +331,13 @@
             <e p="DelegateExtensions.cs" t="Include" />
           </e>
           <e p="Features" t="Include">
+            <e p="Bots" t="Include">
+              <e p="FastCannonBotBehaviourSystem.cs" t="Include" />
+              <e p="FrequentCannonBotBehaviourSystem.cs" t="Include" />
+              <e p="HeavyCannonBotsBehaviourSystem.cs" t="Include" />
+              <e p="UpdateBotsBehaviourSystem.cs" t="Include" />
+              <e p="UpdateBotsClockSystem.cs" t="Include" />
+            </e>
             <e p="Game" t="Include">
               <e p="CooldownSystem.cs" t="Include" />
               <e p="DestroyEntitiesGameSystem.cs" t="Include" />
@@ -364,6 +373,9 @@
           <e p="GameStarter.cs" t="Include" />
           <e p="Interfaces" t="Include">
             <e p="IReadyToDestroy.cs" t="Include" />
+          </e>
+          <e p="ScriptableObjects" t="Include">
+            <e p="PlanetsScriptableObject.cs" t="Include" />
           </e>
           <e p="Views" t="Include">
             <e p="BaseView" t="Include">

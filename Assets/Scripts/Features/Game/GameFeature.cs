@@ -1,4 +1,5 @@
-﻿using Features.Game.GameTime;
+﻿using Features.Bots;
+using Features.Game.GameTime;
 using Features.Game.Gravity;
 using Features.Game.Projectile;
 
@@ -34,6 +35,13 @@ namespace Features.Game
             Add(new CooldownSystem(contexts));
             
             Add(new HandleCollisionSystem(contexts));
+
+            Add(new UpdateBotsClockSystem(contexts));
+            Add(new UpdateBotsBehaviourSystem(contexts));
+            
+            Add(new HeavyCannonBotsBehaviourSystem(contexts));
+            Add(new FastCannonBotBehaviourSystem(contexts));
+            Add(new FrequentCannonBotBehaviourSystem(contexts));
             
             Add(new DestroyEntitiesGameSystem(contexts.game));
         }

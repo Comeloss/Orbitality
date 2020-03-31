@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd5515d1257394b9afbfb10cc2513c, type: 3}
+  m_Name: PlanetsData
+  m_EditorClassIdentifier: 
+  PlayerName: Leo
+  PlayerIndex: 3
+  planets:
+  - Name: Earth
+    Sprite: {fileID: 21300000, guid: bb6d077a6d4891743b3f64e873f077e0, type: 3}
+    Mass: 1800
+    Size: 5
+    Type: 3
+    Health: 100
+    OrbitWidth: 80
+    OrbitHeight: 100
+    OrbitCenterX: 0
+    OrbitCenterY: 0
+    Speed: 0.3
+  - Name: Venus
+    Sprite: {fileID: 21300000, guid: ed789285903449e44a03a30df4fb00f0, type: 3}
+    Mass: 3000
+    Size: 7
+    Type: 3
+    Health: 100
+    OrbitWidth: 150
+    OrbitHeight: 150
+    OrbitCenterX: 0
+    OrbitCenterY: 0
+    Speed: 0.25
+  - Name: Pluto
+    Sprite: {fileID: 21300000, guid: 3e74ce56068f680438ca723b54687797, type: 3}
+    Mass: 3800
+    Size: 8
+    Type: 1
+    Health: 100
+    OrbitWidth: 350
+    OrbitHeight: 250
+    OrbitCenterX: 50
+    OrbitCenterY: 0
+    Speed: 0.15
+  - Name: Jupiter
+    Sprite: {fileID: 21300000, guid: a98d0e2bf46f98942bba3c9357238e63, type: 3}
+    Mass: 2500
+    Size: 6
+    Type: 2
+    Health: 100
+    OrbitWidth: 280
+    OrbitHeight: 200
+    OrbitCenterX: -50
+    OrbitCenterY: -50
+    Speed: 0.1

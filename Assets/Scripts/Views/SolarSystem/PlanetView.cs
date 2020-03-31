@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UniRx;
 
 namespace Views.SolarSystem
@@ -13,6 +14,7 @@ namespace Views.SolarSystem
         [SerializeField] private Transform _orbitalVector;
         [SerializeField] private Transform _gravityVector;
         [SerializeField] private Transform _resultVector;
+        [SerializeField] private TextMeshPro _name;
 #pragma warning restore 0649
 
         private int _planetId;
@@ -67,6 +69,12 @@ namespace Views.SolarSystem
                 entity => entity,
                 entity => entity.hasPlanetInfo && entity.planetInfo.Id.ToString() == ViewId,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdateCooldownData);
+            
+            ObserveEntityWithComponents(
+                GameMatcher.Player,
+                entity => entity,
+                entity => entity.hasPlanetInfo && entity.planetInfo.Id.ToString() == ViewId,
+                additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdateNameData);
         }
 
         public void Init(int id)
@@ -80,6 +88,21 @@ namespace Views.SolarSystem
         public int GetPlanetId()
         {
             return _planetId;
+        }
+
+        private void UpdateNameData(GameEntity entity)
+        {
+            if (!_name)
+            {
+                return;
+            }
+
+            if (!_name.gameObject.activeSelf)
+            {
+                _name.gameObject.SetActive(true);
+            }
+
+            _name.SetText(entity.player.PlayerName);
         }
 
         private void UpdateHealthData(GameEntity entity)
@@ -126,6 +149,7 @@ namespace Views.SolarSystem
 
             _cannon = Instantiate(_cannonTranform, transform);
             _cannon.ViewId = ViewId;
+            _cannon.Init();
             
             if (!_cooldownBar)
             {

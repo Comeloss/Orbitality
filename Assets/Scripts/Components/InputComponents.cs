@@ -3,7 +3,7 @@
 [Input]
 public class TriggerFireComponent : IComponent
 {
-    public int PlaneId;
+    public int PlanetId;
 }
 
 [Input]

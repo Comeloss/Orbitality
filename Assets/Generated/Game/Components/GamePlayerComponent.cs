@@ -12,22 +12,22 @@ public partial class GameContext {
     public PlayerComponent player { get { return playerEntity.player; } }
     public bool hasPlayer { get { return playerEntity != null; } }
 
-    public GameEntity SetPlayer(int newPlaneId) {
+    public GameEntity SetPlayer(int newPlanetId, string newPlayerName) {
         if (hasPlayer) {
             throw new Entitas.EntitasException("Could not set Player!\n" + this + " already has an entity with PlayerComponent!",
                 "You should check if the context already has a playerEntity before setting it or use context.ReplacePlayer().");
         }
         var entity = CreateEntity();
-        entity.AddPlayer(newPlaneId);
+        entity.AddPlayer(newPlanetId, newPlayerName);
         return entity;
     }
 
-    public void ReplacePlayer(int newPlaneId) {
+    public void ReplacePlayer(int newPlanetId, string newPlayerName) {
         var entity = playerEntity;
         if (entity == null) {
-            entity = SetPlayer(newPlaneId);
+            entity = SetPlayer(newPlanetId, newPlayerName);
         } else {
-            entity.ReplacePlayer(newPlaneId);
+            entity.ReplacePlayer(newPlanetId, newPlayerName);
         }
     }
 
@@ -49,17 +49,19 @@ public partial class GameEntity {
     public PlayerComponent player { get { return (PlayerComponent)GetComponent(GameComponentsLookup.Player); } }
     public bool hasPlayer { get { return HasComponent(GameComponentsLookup.Player); } }
 
-    public void AddPlayer(int newPlaneId) {
+    public void AddPlayer(int newPlanetId, string newPlayerName) {
         var index = GameComponentsLookup.Player;
         var component = CreateComponent<PlayerComponent>(index);
-        component.PlaneId = newPlaneId;
+        component.PlanetId = newPlanetId;
+        component.PlayerName = newPlayerName;
         AddComponent(index, component);
     }
 
-    public void ReplacePlayer(int newPlaneId) {
+    public void ReplacePlayer(int newPlanetId, string newPlayerName) {
         var index = GameComponentsLookup.Player;
         var component = CreateComponent<PlayerComponent>(index);
-        component.PlaneId = newPlaneId;
+        component.PlanetId = newPlanetId;
+        component.PlayerName = newPlayerName;
         ReplaceComponent(index, component);
     }
 

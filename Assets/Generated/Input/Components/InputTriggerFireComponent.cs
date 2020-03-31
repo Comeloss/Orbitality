@@ -11,17 +11,17 @@ public partial class InputEntity {
     public TriggerFireComponent triggerFire { get { return (TriggerFireComponent)GetComponent(InputComponentsLookup.TriggerFire); } }
     public bool hasTriggerFire { get { return HasComponent(InputComponentsLookup.TriggerFire); } }
 
-    public void AddTriggerFire(int newPlaneId) {
+    public void AddTriggerFire(int newPlanetId) {
         var index = InputComponentsLookup.TriggerFire;
         var component = CreateComponent<TriggerFireComponent>(index);
-        component.PlaneId = newPlaneId;
+        component.PlanetId = newPlanetId;
         AddComponent(index, component);
     }
 
-    public void ReplaceTriggerFire(int newPlaneId) {
+    public void ReplaceTriggerFire(int newPlanetId) {
         var index = InputComponentsLookup.TriggerFire;
         var component = CreateComponent<TriggerFireComponent>(index);
-        component.PlaneId = newPlaneId;
+        component.PlanetId = newPlanetId;
         ReplaceComponent(index, component);
     }
 

@@ -30,7 +30,7 @@ namespace Features.Game.Projectile
             foreach (var inputEntity in entities)
             {
                 var cannon = _contexts.game.GetGroup(GameMatcher.ProjectileCannon)
-                    .FirstOrDefault(x => x.projectileCannon.CannonId == inputEntity.triggerFire.PlaneId && x.hasPosition);
+                    .FirstOrDefault(x => x.projectileCannon.CannonId == inputEntity.triggerFire.PlanetId && x.hasPosition);
                 
                 if (cannon == null || (cannon.hasCooldown && cannon.cooldown.IsCoolingDown))
                 {
