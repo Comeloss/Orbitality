@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Features.GameInfoFeature
 {
-    public class TimeSystem : IExecuteSystem, IInitializeSystem
+    public class TimeSystem : IExecuteSystem
     {
         private readonly Contexts _contexts;
     
@@ -11,14 +11,7 @@ namespace Features.GameInfoFeature
         {
             _contexts = contexts;
         }
-        
-        public void Initialize()
-        {
-            _contexts.game.ReplaceGameTime(0);
-            _contexts.game.ReplaceGameTimeMilliseconds(0);
-            _contexts.game.ReplaceGameDeltaTime(Time.time);
-        }
-        
+
         public void Execute()
         {
             if (!_contexts.game.hasGamePlayState || _contexts.game.gamePlayState.CurrentState == GamePlayStateComponent.GamePlayStateType.Pause)

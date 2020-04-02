@@ -4,7 +4,10 @@
     {
         public GameInfoFeature(Contexts contexts)
         {
-            Add(new InitGamePlayStateSystem());
+            Add(new StartGameSystem());
+            Add(new OnInitGameSystem(contexts));
+            
+            Add(new ResetTimeSystem(contexts));
             Add(new SwitchGamePlayStateSystem(contexts));
             Add(new TimeSystem(contexts));
         }

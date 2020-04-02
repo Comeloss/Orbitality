@@ -12,6 +12,8 @@ namespace Views.UI
         [SerializeField] private Button _playPuaseButton;
         [SerializeField] private Button _loadButton;
         [SerializeField] private Button _saveButton;
+        [SerializeField] private Button _shootButton;
+        [SerializeField] private Button _restartButton;
         [SerializeField] private TextMeshProUGUI _buttonText;
 #pragma warning restore 0649
 
@@ -29,11 +31,25 @@ namespace Views.UI
             _playPuaseButton.onClick.AddListener(SwitchGamePlayState);
             _loadButton.onClick.AddListener(LoadGame);
             _saveButton.onClick.AddListener(SaveGame);
+            _shootButton.onClick.AddListener(Shoot);
+            _restartButton.onClick.AddListener(Restart);
         }
 
         private void LoadGame()
         {
             C.input.CreateEntity().ReplaceLoad(_orbitalitySaveText);
+        }
+
+        private void Restart()
+        {
+            C.input.CreateEntity().isRestart = true;
+        }
+
+        private void Shoot()
+        {
+            var playerId = Contexts.sharedInstance.game.player.PlanetId; 
+                
+            Contexts.sharedInstance.input.CreateEntity().ReplaceTriggerFire(playerId);
         }
 
         private void SaveGame()
@@ -77,6 +93,8 @@ namespace Views.UI
             _playPuaseButton.onClick.RemoveAllListeners();
             _loadButton.onClick.RemoveAllListeners();
             _saveButton.onClick.RemoveAllListeners();
+            _shootButton.onClick.RemoveAllListeners();
         }
     }
 }
+

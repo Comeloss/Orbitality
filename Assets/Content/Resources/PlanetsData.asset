@@ -19,7 +19,7 @@ MonoBehaviour:
     Sprite: planet1
     Mass: 1800
     Size: 5
-    Type: 0
+    Type: 2
     Health: 100
     OrbitWidth: 80
     OrbitHeight: 100
@@ -30,7 +30,7 @@ MonoBehaviour:
     Sprite: planet2
     Mass: 3000
     Size: 7
-    Type: 2
+    Type: 0
     Health: 100
     OrbitWidth: 150
     OrbitHeight: 150

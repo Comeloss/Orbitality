@@ -50,7 +50,7 @@ namespace Features.SaveFeature
                 return;
             }
             
-            CleanUp();
+            _contexts.game.CleanUp();
 
             Observable.Timer(TimeSpan.FromTicks(1)).Subscribe((_) =>
             {
@@ -62,17 +62,7 @@ namespace Features.SaveFeature
                 LoadData(save);
             });
         }
-
-        private void CleanUp()
-        {
-            var destroyEntities = _contexts.game.GetEntities();
-
-            foreach (var entity in destroyEntities)
-            {
-                entity.isReadyToDestroy = true;
-            }
-        }
-
+        
         private void LoadData(Save save)
         {
             _contexts.game.ReplaceGamePlayState(GamePlayStateComponent.GamePlayStateType.Pause);

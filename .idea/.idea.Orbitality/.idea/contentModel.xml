@@ -47,8 +47,10 @@
           <e p="Input" t="Include">
             <e p="Components" t="Include">
               <e p="InputCollisionComponent.cs" t="Include" />
+              <e p="InputInitGameplayComponent.cs" t="Include" />
               <e p="InputLoadComponent.cs" t="Include" />
               <e p="InputNewSaveComponent.cs" t="Include" />
+              <e p="InputRestartComponent.cs" t="Include" />
               <e p="InputSwitchGamePlayStateComponent.cs" t="Include" />
               <e p="InputTriggerFireComponent.cs" t="Include" />
             </e>
@@ -65,9 +67,6 @@
           </e>
         </e>
         <e p="Plugins" t="Include">
-          <e p="MiniJSON" t="Include">
-            <e p="MiniJson.cs" t="Include" />
-          </e>
           <e p="UniRx" t="Include">
             <e p="Scripts" t="Include">
               <e p="Asynchronous" t="Include">
@@ -333,6 +332,7 @@
           </e>
           <e p="Extensions" t="Include">
             <e p="DelegateExtensions.cs" t="Include" />
+            <e p="GameContext.cs" t="Include" />
           </e>
           <e p="Features" t="Include">
             <e p="BotsFeature" t="Include">
@@ -354,7 +354,10 @@
             </e>
             <e p="GameInfoFeature" t="Include">
               <e p="GameInfoFeature.cs" t="Include" />
-              <e p="InitGamePlayStateSystem.cs" t="Include" />
+              <e p="OnInitGameSystem.cs" t="Include" />
+              <e p="OnRestartGameSystem.cs" t="Include" />
+              <e p="ResetTimeSystem.cs" t="Include" />
+              <e p="StartGameSystem.cs" t="Include" />
               <e p="SwitchGamePlayStateSystem.cs" t="Include" />
               <e p="TimeSystem.cs" t="Include" />
             </e>
@@ -394,7 +397,6 @@
               <e p="ViewBase.cs" t="Include" />
             </e>
             <e p="CannonView.cs" t="Include" />
-            <e p="InputSystem.cs" t="Include" />
             <e p="ProgressBar.cs" t="Include" />
             <e p="ProjectileView.cs" t="Include" />
             <e p="SolarSystem" t="Include">

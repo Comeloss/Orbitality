@@ -31,51 +31,6 @@ public abstract class ReactiveViewBase : ViewBase
         return Contexts.sharedInstance.input.CreateEntity();
     }
 
-    protected void SubscribeEntityWithComponents<TEntity, TResult>(
-        IMatcher<TEntity> matcher,
-        Func<TEntity, TResult> selector,
-        Func<TResult, bool> filter,
-        Action<TResult> onNext,
-        Action<Exception> onError = null,
-        ObserveFlags modifiers =
-            ObserveFlags.OnGroupAdded |
-            ObserveFlags.WhenViewEnabled |
-            ObserveFlags.IncludeExistingEntities,
-        ObserveFlags additionalModifiers = ObserveFlags.None)
-        where TEntity : class, IEntity
-    {
-        ObserveEntityWithComponents(matcher, selector, filter, modifiers | additionalModifiers)
-            .Subscribe(onNext.SafeInvoke, ex =>
-            {
-                Debug.LogError("[Reactive View] " + ex.ToString());
-
-                onError.SafeInvoke(ex);
-            });
-    }
-
-    protected void SubscribeEntitiesWithComponents<TEntity, TResult>(
-        IMatcher<TEntity> matcher,
-        Func<TEntity[], TResult> selector,
-        Func<TResult, bool> filter,
-        Action<TResult> onNext,
-        Action<Exception> onError = null,
-        ObserveFlags modifiers =
-            ObserveFlags.OnGroupAdded |
-            ObserveFlags.OnGroupRemoved |
-            ObserveFlags.WhenViewEnabled |
-            ObserveFlags.IncludeExistingEntities,
-        ObserveFlags additionalModifiers = ObserveFlags.None)
-        where TEntity : class, IEntity
-    {
-        ObserveEntitiesWithComponents(matcher, selector, filter, modifiers | additionalModifiers)
-            .Subscribe(onNext.SafeInvoke, ex =>
-            {
-                Debug.LogError("[Reactive View] " + ex.ToString());
-
-                onError.SafeInvoke(ex);
-            });
-    }
-
     protected UniRx.IObservable<TResult> ObserveEntityWithComponents<TEntity, TResult>(
         IMatcher<TEntity> matcher,
         Func<TEntity, TResult> selector = null,
@@ -97,73 +52,7 @@ public abstract class ReactiveViewBase : ViewBase
 
         return runtime;
     }
-
-    protected UniRx.IObservable<TResult> ObserveEntitiesWithComponents<TEntity, TResult>(
-        IMatcher<TEntity> matcher,
-        Func<TEntity[], TResult> selector = null,
-        Func<TResult, bool> filter = null,
-        ObserveFlags modifiers =
-            ObserveFlags.OnGroupAdded |
-            ObserveFlags.OnGroupRemoved |
-            ObserveFlags.WhenViewEnabled |
-            ObserveFlags.IncludeExistingEntities,
-        ObserveFlags additionalModifiers = ObserveFlags.None)
-        where TEntity : class, IEntity
-    {
-        var trigger = ObserveEntitiesFromEventInternal(matcher,
-            selector ?? (e => e.GetType() == typeof(TResult) ? (TResult) (object) e : default(TResult)),
-            filter ?? (e => true), modifiers | additionalModifiers);
-
-        var runtime = new ReplaySubject<TResult>();
-        _observers.Add(new KeyValuePair<IDisposable, IDisposable>(trigger.Subscribe(runtime), runtime),
-            modifiers | additionalModifiers);
-
-        return runtime;
-    }
-
-    protected IReadOnlyReactiveProperty<TResult> PersistEntityWithComponents<TEntity, TResult>(
-        IMatcher<TEntity> matcher,
-        Func<TEntity, TResult> selector = null,
-        Func<TResult, bool> filter = null,
-        ObserveFlags modifiers =
-            ObserveFlags.OnGroupAdded |
-            ObserveFlags.WhenViewEnabled |
-            ObserveFlags.IncludeExistingEntities,
-        ObserveFlags additionalModifiers = ObserveFlags.None)
-        where TEntity : class, IEntity
-    {
-        var trigger = ObserveEntityFromEventInternal(matcher,
-            selector ?? (e => e.GetType() == typeof(TResult) ? (TResult) (object) e : default(TResult)),
-            filter ?? (e => true), modifiers | additionalModifiers);
-        
-        var runtime = new ReactiveProperty<TResult>(trigger);
-        _observers.Add(new KeyValuePair<IDisposable, IDisposable>(runtime, null), modifiers | additionalModifiers);
-
-        return runtime;
-    }
-
-    protected IReadOnlyReactiveProperty<TResult> PersistEntitiesWithComponents<TEntity, TResult>(
-        IMatcher<TEntity> matcher,
-        Func<TEntity[], TResult> selector = null,
-        Func<TResult, bool> filter = null,
-        ObserveFlags modifiers =
-            ObserveFlags.OnGroupAdded |
-            ObserveFlags.OnGroupRemoved |
-            ObserveFlags.WhenViewEnabled |
-            ObserveFlags.IncludeExistingEntities,
-        ObserveFlags additionalModifiers = ObserveFlags.None)
-        where TEntity : class, IEntity
-    {
-        var trigger = ObserveEntitiesFromEventInternal(matcher,
-                selector ?? (e => e.GetType() == typeof(TResult) ? (TResult) (object) e : default(TResult)), 
-                filter ?? (e => true), modifiers | additionalModifiers);
-        ;
-        var runtime = new ReactiveProperty<TResult>(trigger);
-        _observers.Add(new KeyValuePair<IDisposable, IDisposable>(runtime, null), modifiers | additionalModifiers);
-
-        return runtime;
-    }
-
+  
     private UniRx.IObservable<TResult> ObserveEntityFromEventInternal<TEntity, TResult>(
         IMatcher<TEntity> matcher,
         Func<TEntity, TResult> selector,

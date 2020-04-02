@@ -4,7 +4,7 @@
     {
         public GameplayFeature(Contexts contexts)
         {
-            Add(new InitSpaceSystem());
+            Add(new InitSpaceSystem(contexts));
             Add(new UpdateGravityVelocitySystem(contexts));
             Add(new UpdatePlanetsVelocitySystem(contexts));
             Add(new UpdateVelocitySystem(contexts));

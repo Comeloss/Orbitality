@@ -30,3 +30,13 @@ public class LoadComponent : IComponent
 public class SwitchGamePlayStateComponent : IComponent
 {
 }
+
+[Input]
+public class InitGameplayComponent : IComponent
+{
+}
+
+[Input]
+public class RestartComponent : IComponent
+{
+}
