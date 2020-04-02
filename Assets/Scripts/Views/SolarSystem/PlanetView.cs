@@ -152,6 +152,7 @@ namespace Views.SolarSystem
 
             _cannon = Instantiate(_cannonTranform, transform);
             _cannon.ViewId = ViewId;
+            _cannon.gameObject.SetActive(true);
 
             if (!_cooldownBar)
             {

@@ -31,8 +31,6 @@ namespace Features.SolarSystemFeature
             }
             
             var sun = Contexts.sharedInstance.game.CreateEntity();
-
-            var sunSprite = Resources.Load<Sprite>("sun");
             
             sun.ReplacePlanetInfo(Sun, data.planets.Length, "sun", 10);
             sun.ReplaceMass(10000);

@@ -37,6 +37,7 @@ namespace Views
         {
             var projectile = Instantiate(_projectile, transform.parent);
             projectile.Init(component.PlanetId, component.ProjectileId, _projectileSize, _projectileColour);
+            projectile.gameObject.SetActive(true);
         }
     }
 }
