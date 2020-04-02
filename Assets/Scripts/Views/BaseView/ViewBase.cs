@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 [DisallowMultipleComponent]
@@ -18,26 +17,6 @@ public abstract class ViewBase : MonoBehaviour
 
             return _contexts;
         }
-    }
-
-
-    public string GetViewId()
-    {
-        return ViewId;
-    }
-
-    public string GetAliasName()
-    {
-        return GetAliasName(GetType());
-    }
-
-    public static string GetAliasName(Type viewType)
-    {
-        var alias = viewType.Name;
-        alias = alias.EndsWith("View")
-            ? alias
-            : alias + "View";
-        return alias;
     }
  
     protected virtual void ViewAwake()

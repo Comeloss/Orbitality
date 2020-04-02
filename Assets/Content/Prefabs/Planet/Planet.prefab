@@ -215,6 +215,13 @@ MonoBehaviour:
   _gravityVector: {fileID: 8361211105501212089}
   _resultVector: {fileID: 1050368466275027421}
   _name: {fileID: 6009546798267413193}
+  _planetSprites:
+  - {fileID: 21300000, guid: bb6d077a6d4891743b3f64e873f077e0, type: 3}
+  - {fileID: 21300000, guid: 7c1e86207e64b924ca4de389b15c4b7e, type: 3}
+  - {fileID: 21300000, guid: 3e74ce56068f680438ca723b54687797, type: 3}
+  - {fileID: 21300000, guid: cfdfb77f7e2b7db47a489f6ca2feebd5, type: 3}
+  - {fileID: 21300000, guid: ed789285903449e44a03a30df4fb00f0, type: 3}
+  - {fileID: 21300000, guid: a98d0e2bf46f98942bba3c9357238e63, type: 3}
 --- !u!1 &3657166510810420796
 GameObject:
   m_ObjectHideFlags: 0

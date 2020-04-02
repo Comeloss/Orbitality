@@ -11,22 +11,22 @@ public partial class GameEntity {
     public PlanetInfoComponent planetInfo { get { return (PlanetInfoComponent)GetComponent(GameComponentsLookup.PlanetInfo); } }
     public bool hasPlanetInfo { get { return HasComponent(GameComponentsLookup.PlanetInfo); } }
 
-    public void AddPlanetInfo(string newName, int newId, UnityEngine.Sprite newImage, float newSize) {
+    public void AddPlanetInfo(string newName, int newId, string newSpriteName, float newSize) {
         var index = GameComponentsLookup.PlanetInfo;
         var component = CreateComponent<PlanetInfoComponent>(index);
         component.Name = newName;
         component.Id = newId;
-        component.Image = newImage;
+        component.SpriteName = newSpriteName;
         component.Size = newSize;
         AddComponent(index, component);
     }
 
-    public void ReplacePlanetInfo(string newName, int newId, UnityEngine.Sprite newImage, float newSize) {
+    public void ReplacePlanetInfo(string newName, int newId, string newSpriteName, float newSize) {
         var index = GameComponentsLookup.PlanetInfo;
         var component = CreateComponent<PlanetInfoComponent>(index);
         component.Name = newName;
         component.Id = newId;
-        component.Image = newImage;
+        component.SpriteName = newSpriteName;
         component.Size = newSize;
         ReplaceComponent(index, component);
     }

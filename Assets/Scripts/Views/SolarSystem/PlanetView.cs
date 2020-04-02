@@ -1,4 +1,6 @@
-﻿using TMPro;
+﻿using System.Linq;
+using Entitas.VisualDebugging.Unity;
+using TMPro;
 using UnityEngine;
 using UniRx;
 
@@ -15,11 +17,12 @@ namespace Views.SolarSystem
         [SerializeField] private Transform _gravityVector;
         [SerializeField] private Transform _resultVector;
         [SerializeField] private TextMeshPro _name;
+        [SerializeField] private Sprite[] _planetSprites;
 #pragma warning restore 0649
 
         private int _planetId;
         private CannonView _cannon;
-        
+
         protected override void ViewEnable()
         {
             ObserveEntityWithComponents(
@@ -27,49 +30,49 @@ namespace Views.SolarSystem
                 entity => entity.planetInfo,
                 entity => entity.Id.ToString() == ViewId,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdateInfoData);
-            
+
             ObserveEntityWithComponents(
                 GameMatcher.ProjectileCannon,
                 entity => entity,
                 entity => entity.hasPlanetInfo && entity.planetInfo.Id.ToString() == ViewId,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(CreateCannon);
-            
+
             ObserveEntityWithComponents(
                 GameMatcher.Position,
                 entity => entity,
                 entity => entity.hasPlanetInfo && entity.planetInfo.Id.ToString() == ViewId,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdatePositionData);
-            
+
             ObserveEntityWithComponents(
                 GameMatcher.StartVelocity,
                 entity => entity,
                 entity => entity.hasPlanetInfo && entity.planetInfo.Id.ToString() == ViewId,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdateOrbitalVectorData);
-            
+
             ObserveEntityWithComponents(
                 GameMatcher.GravityVelocity,
                 entity => entity,
                 entity => entity.hasPlanetInfo && entity.planetInfo.Id.ToString() == ViewId,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdateGravityVectorData);
-            
+
             ObserveEntityWithComponents(
                 GameMatcher.Velocity,
                 entity => entity,
                 entity => entity.hasPlanetInfo && entity.planetInfo.Id.ToString() == ViewId,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdateResultVectorData);
-            
+
             ObserveEntityWithComponents(
                 GameMatcher.Health,
                 entity => entity,
                 entity => entity.hasPlanetInfo && entity.planetInfo.Id.ToString() == ViewId,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdateHealthData);
-            
+
             ObserveEntityWithComponents(
                 GameMatcher.Cooldown,
                 entity => entity,
                 entity => entity.hasPlanetInfo && entity.planetInfo.Id.ToString() == ViewId,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(UpdateCooldownData);
-            
+
             ObserveEntityWithComponents(
                 GameMatcher.Player,
                 entity => entity,
@@ -81,7 +84,7 @@ namespace Views.SolarSystem
         {
             ViewId = id.ToString();
             _planetId = id;
-            
+
             ViewEnable();
         }
 
@@ -119,7 +122,7 @@ namespace Views.SolarSystem
 
             _healthBar.UpdateBar(entity.health.Proportion);
         }
-        
+
         private void UpdateCooldownData(GameEntity entity)
         {
             if (!_cooldownBar)
@@ -132,7 +135,7 @@ namespace Views.SolarSystem
 
         private void UpdateInfoData(PlanetInfoComponent component)
         {
-            SetPlanetImageAndSize(component.Image, component.Size);
+            SetPlanetImageAndSize(component.SpriteName, component.Size);
         }
 
         private void CreateCannon(GameEntity entity)
@@ -144,13 +147,12 @@ namespace Views.SolarSystem
 
             if (_cannon != null)
             {
-                Destroy(_cannon);
+                _cannon.gameObject.DestroyGameObject();
             }
 
             _cannon = Instantiate(_cannonTranform, transform);
             _cannon.ViewId = ViewId;
-            _cannon.Init();
-            
+
             if (!_cooldownBar)
             {
                 return;
@@ -171,7 +173,7 @@ namespace Views.SolarSystem
 
             transform.position = entity.position.Position;
         }
-        
+
         private void UpdateOrbitalVectorData(GameEntity entity)
         {
             if (!entity.hasStartVelocity || !_orbitalVector)
@@ -182,7 +184,7 @@ namespace Views.SolarSystem
             var scale = _orbitalVector.localScale;
             scale.x = entity.startVelocity.Velocity.magnitude;
             _orbitalVector.localScale = scale;
-            
+
             var angle = Vector2.SignedAngle(entity.startVelocity.Velocity, Vector3.right) * -1;
 
             var rot = _orbitalVector.rotation;
@@ -191,7 +193,7 @@ namespace Views.SolarSystem
             rot.eulerAngles = rotAngle;
             _orbitalVector.rotation = rot;
         }
-        
+
         private void UpdateGravityVectorData(GameEntity entity)
         {
             if (!entity.hasGravityVelocity || !_gravityVector)
@@ -203,7 +205,7 @@ namespace Views.SolarSystem
             scale.x = entity.gravityVelocity.Velocity.magnitude;
             _gravityVector.localScale = scale;
 
-            float angle = Vector2.SignedAngle(entity.gravityVelocity.Velocity, Vector3.right) * -1;
+            var angle = Vector2.SignedAngle(entity.gravityVelocity.Velocity, Vector3.right) * -1;
 
             var rot = _gravityVector.rotation;
             var rotAngle = rot.eulerAngles;
@@ -211,7 +213,7 @@ namespace Views.SolarSystem
             rot.eulerAngles = rotAngle;
             _gravityVector.rotation = rot;
         }
-        
+
         private void UpdateResultVectorData(GameEntity entity)
         {
             if (!entity.hasVelocity || !_resultVector)
@@ -222,7 +224,7 @@ namespace Views.SolarSystem
             var scale = _resultVector.localScale;
             scale.x = entity.velocity.Velocity.magnitude;
             _resultVector.localScale = scale;
-            
+
             var angle = Vector2.SignedAngle(entity.velocity.Velocity, Vector3.right) * -1;
 
             var rot = _resultVector.rotation;
@@ -232,20 +234,27 @@ namespace Views.SolarSystem
             _resultVector.rotation = rot;
         }
 
-        private void SetPlanetImageAndSize(Sprite sprite, float size)
+        private void SetPlanetImageAndSize(string spriteName, float size)
         {
             if (!_planetImage)
             {
                 return;
             }
-            
+
             _planetImage.transform.localScale = Vector3.one * size;
-            
+
+            if (_planetSprites == null || _planetSprites.Length == 0)
+            {
+                return;
+            }
+
+            var sprite = _planetSprites.FirstOrDefault(s => s.name == spriteName);
+
             if (sprite == null)
             {
                 return;
             }
-            
+
             _planetImage.sprite = sprite;
         }
     }

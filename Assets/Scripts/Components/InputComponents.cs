@@ -9,9 +9,21 @@ public class TriggerFireComponent : IComponent
 [Input]
 public class CollisionComponent : IComponent
 {
- public int ProjectileId;
- public int ProjectileLauncherId;
- public int TargetId;
+    public int ProjectileId;
+    public int ProjectileLauncherId;
+    public int TargetId;
+}
+
+[Input]
+public class NewSaveComponent : IComponent
+{
+    public string SaveName;
+}
+
+[Input]
+public class LoadComponent : IComponent
+{
+    public string LoadName;
 }
  
 [Input]

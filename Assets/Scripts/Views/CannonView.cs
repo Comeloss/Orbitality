@@ -11,7 +11,7 @@ namespace Views
 
         private float _projectileSize = 1;
         private Color _projectileColour = Color.white;
-        
+
         protected override void ViewEnable()
         {
             ObserveEntityWithComponents(
@@ -25,11 +25,6 @@ namespace Views
                 entity => entity,
                 entity => entity.hasProjectileCannon && entity.projectileCannon.CannonId.ToString() == ViewId,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(InitCannon);
-        }
-
-        public void Init()
-        {
-            ViewEnable();
         }
 
         private void InitCannon(GameEntity entity)

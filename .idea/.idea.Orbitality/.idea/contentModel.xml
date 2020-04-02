@@ -25,7 +25,6 @@
               <e p="GameHealthComponent.cs" t="Include" />
               <e p="GameLifeTimeComponent.cs" t="Include" />
               <e p="GameMassComponent.cs" t="Include" />
-              <e p="GameOrbitalMagnitudeComponent.cs" t="Include" />
               <e p="GamePlanetInfoComponent.cs" t="Include" />
               <e p="GamePlanetTrajectoryComponent.cs" t="Include" />
               <e p="GamePlayerComponent.cs" t="Include" />
@@ -48,6 +47,8 @@
           <e p="Input" t="Include">
             <e p="Components" t="Include">
               <e p="InputCollisionComponent.cs" t="Include" />
+              <e p="InputLoadComponent.cs" t="Include" />
+              <e p="InputNewSaveComponent.cs" t="Include" />
               <e p="InputSwitchGamePlayStateComponent.cs" t="Include" />
               <e p="InputTriggerFireComponent.cs" t="Include" />
             </e>
@@ -64,6 +65,9 @@
           </e>
         </e>
         <e p="Plugins" t="Include">
+          <e p="MiniJSON" t="Include">
+            <e p="MiniJson.cs" t="Include" />
+          </e>
           <e p="UniRx" t="Include">
             <e p="Scripts" t="Include">
               <e p="Asynchronous" t="Include">
@@ -331,43 +335,50 @@
             <e p="DelegateExtensions.cs" t="Include" />
           </e>
           <e p="Features" t="Include">
-            <e p="Bots" t="Include">
+            <e p="BotsFeature" t="Include">
+              <e p="BotsFeature.cs" t="Include" />
               <e p="FastCannonBotBehaviourSystem.cs" t="Include" />
               <e p="FrequentCannonBotBehaviourSystem.cs" t="Include" />
               <e p="HeavyCannonBotsBehaviourSystem.cs" t="Include" />
               <e p="UpdateBotsBehaviourSystem.cs" t="Include" />
               <e p="UpdateBotsClockSystem.cs" t="Include" />
             </e>
-            <e p="Game" t="Include">
+            <e p="CannonsFeature" t="Include">
+              <e p="CannonsFeature.cs" t="Include" />
+              <e p="HandleCollisionSystem.cs" t="Include" />
+              <e p="InitProjectileCannonsSystem.cs" t="Include" />
+              <e p="ProjectilesGravitySystem.cs" t="Include" />
+              <e p="ShootProjectileSystem.cs" t="Include" />
+              <e p="UpdateProjectilesLifeTimeSystem.cs" t="Include" />
+              <e p="UpdateProjectileStartVelocitySystem.cs" t="Include" />
+            </e>
+            <e p="GameInfoFeature" t="Include">
+              <e p="GameInfoFeature.cs" t="Include" />
+              <e p="InitGamePlayStateSystem.cs" t="Include" />
+              <e p="SwitchGamePlayStateSystem.cs" t="Include" />
+              <e p="TimeSystem.cs" t="Include" />
+            </e>
+            <e p="InputFeature" t="Include">
+              <e p="CleanupInputContext.cs" t="Include" />
+              <e p="InputFeature.cs" t="Include" />
+            </e>
+            <e p="SaveFeature" t="Include">
+              <e p="LoadSystem.cs" t="Include" />
+              <e p="SaveData.cs" t="Include" />
+              <e p="SaveLoadFeature.cs" t="Include" />
+              <e p="SaveSystem.cs" t="Include" />
+            </e>
+            <e p="SolarSystemFeature" t="Include">
               <e p="CooldownSystem.cs" t="Include" />
               <e p="DestroyEntitiesGameSystem.cs" t="Include" />
               <e p="GameFeature.cs" t="Include" />
-              <e p="GameTime" t="Include">
-                <e p="TimeSystem.cs" t="Include" />
-              </e>
-              <e p="Gravity" t="Include">
-                <e p="ProjectilesGravitySystem.cs" t="Include" />
-                <e p="UpdateGravityVelocitySystem.cs" t="Include" />
-                <e p="UpdateObjectsPositionSystem.cs" t="Include" />
-                <e p="UpdatePlanetsVelocitySystem.cs" t="Include" />
-                <e p="UpdateProjectileStartVelocitySystem.cs" t="Include" />
-                <e p="UpdateVelocitySystem.cs" t="Include" />
-              </e>
               <e p="HandleObjectHealthSystem.cs" t="Include" />
-              <e p="InitGamePlayStateSystem.cs" t="Include" />
               <e p="InitSpaceSystem.cs" t="Include" />
-              <e p="Projectile" t="Include">
-                <e p="HandleCollisionSystem.cs" t="Include" />
-                <e p="InitProjectileCannonsSystem.cs" t="Include" />
-                <e p="LifeTimeSystem.cs" t="Include" />
-                <e p="ShootProjectileSystem.cs" t="Include" />
-                <e p="UpdateProjectilesLifeTimeSystem.cs" t="Include" />
-              </e>
-              <e p="SwitchGamePlayStateSystem.cs" t="Include" />
-            </e>
-            <e p="Input" t="Include">
-              <e p="CleanupInputContext.cs" t="Include" />
-              <e p="InputFeature.cs" t="Include" />
+              <e p="LifeTimeSystem.cs" t="Include" />
+              <e p="UpdateGravityVelocitySystem.cs" t="Include" />
+              <e p="UpdateObjectsPositionSystem.cs" t="Include" />
+              <e p="UpdatePlanetsVelocitySystem.cs" t="Include" />
+              <e p="UpdateVelocitySystem.cs" t="Include" />
             </e>
           </e>
           <e p="GameStarter.cs" t="Include" />
@@ -391,7 +402,7 @@
               <e p="SolarSystemView.cs" t="Include" />
             </e>
             <e p="UI" t="Include">
-              <e p="PauseButtonView.cs" t="Include" />
+              <e p="ButtonsView.cs" t="Include" />
             </e>
           </e>
         </e>

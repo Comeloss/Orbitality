@@ -9,19 +9,25 @@
 public static class InputComponentsLookup {
 
     public const int Collision = 0;
-    public const int SwitchGamePlayState = 1;
-    public const int TriggerFire = 2;
+    public const int Load = 1;
+    public const int NewSave = 2;
+    public const int SwitchGamePlayState = 3;
+    public const int TriggerFire = 4;
 
-    public const int TotalComponents = 3;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
         "Collision",
+        "Load",
+        "NewSave",
         "SwitchGamePlayState",
         "TriggerFire"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(CollisionComponent),
+        typeof(LoadComponent),
+        typeof(NewSaveComponent),
         typeof(SwitchGamePlayStateComponent),
         typeof(TriggerFireComponent)
     };

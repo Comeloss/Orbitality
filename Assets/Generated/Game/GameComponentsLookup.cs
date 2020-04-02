@@ -21,21 +21,20 @@ public static class GameComponentsLookup {
     public const int Health = 10;
     public const int LifeTime = 11;
     public const int Mass = 12;
-    public const int OrbitalMagnitude = 13;
-    public const int PlanetInfo = 14;
-    public const int PlanetTrajectory = 15;
-    public const int Player = 16;
-    public const int Position = 17;
-    public const int ProjectileCannon = 18;
-    public const int ProjectileCannonType = 19;
-    public const int Projectile = 20;
-    public const int ProjectilesTotalShoot = 21;
-    public const int ReadyToDestroy = 22;
-    public const int Speed = 23;
-    public const int StartVelocity = 24;
-    public const int Velocity = 25;
+    public const int PlanetInfo = 13;
+    public const int PlanetTrajectory = 14;
+    public const int Player = 15;
+    public const int Position = 16;
+    public const int ProjectileCannon = 17;
+    public const int ProjectileCannonType = 18;
+    public const int Projectile = 19;
+    public const int ProjectilesTotalShoot = 20;
+    public const int ReadyToDestroy = 21;
+    public const int Speed = 22;
+    public const int StartVelocity = 23;
+    public const int Velocity = 24;
 
-    public const int TotalComponents = 26;
+    public const int TotalComponents = 25;
 
     public static readonly string[] componentNames = {
         "BotAi",
@@ -51,7 +50,6 @@ public static class GameComponentsLookup {
         "Health",
         "LifeTime",
         "Mass",
-        "OrbitalMagnitude",
         "PlanetInfo",
         "PlanetTrajectory",
         "Player",
@@ -80,7 +78,6 @@ public static class GameComponentsLookup {
         typeof(HealthComponent),
         typeof(LifeTimeComponent),
         typeof(MassComponent),
-        typeof(OrbitalMagnitudeComponent),
         typeof(PlanetInfoComponent),
         typeof(PlanetTrajectoryComponent),
         typeof(PlayerComponent),

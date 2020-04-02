@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Entitas.VisualDebugging.Unity;
+﻿using System;
+using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
 
@@ -11,13 +11,12 @@ namespace Views.SolarSystem
 #pragma warning disable 0649
         [SerializeField] private PlanetView _planetPrefab;    
 #pragma warning restore 0649
-        
 
         private readonly Dictionary<int, PlanetView> _planets = new Dictionary<int, PlanetView>();
-
-        protected override void OnEnable()
+        
+        protected override void ViewEnable()
         {
-            ObserveEntityWithComponents(
+            ObserveEntityWithComponents( 
                 GameMatcher.PlanetInfo,
                 entity => entity.planetInfo,
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(AddPlanet);
@@ -28,6 +27,7 @@ namespace Views.SolarSystem
                 entity => entity.hasPlanetInfo, 
                 additionalModifiers: ObserveFlags.DisposeOnDisable).Subscribe(RemovePlanet);
         }
+
 
         private void AddPlanet(PlanetInfoComponent component)
         {
@@ -55,7 +55,9 @@ namespace Views.SolarSystem
                 return;
             }
 
-            _planets[entity.planetInfo.Id].gameObject.DestroyGameObject();
+            Destroy(_planets[entity.planetInfo.Id].gameObject);
+            
+            _planets.Remove(entity.planetInfo.Id);
         }
     }
 }

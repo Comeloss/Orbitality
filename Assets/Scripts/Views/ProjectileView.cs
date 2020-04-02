@@ -15,7 +15,7 @@ namespace Views
         [SerializeField] private Transform _gravityVector;
 #pragma warning restore 0649
 
-        protected override void OnEnable()
+        protected override void ViewEnable()
         {
             ObserveEntityWithComponents(
                 GameMatcher.Position,

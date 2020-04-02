@@ -9,14 +9,14 @@ namespace ScriptableObjects
         public string PlayerName;
         public int PlayerIndex;
         
-        public PlanetInfo[] planets;
+        public PlanetInfoData[] planets;
     }
     
     [Serializable]
-    public struct PlanetInfo
+    public struct PlanetInfoData
     {
         public string Name;
-        public Sprite Sprite;
+        public string Sprite;
         public int Mass;
         public float Size;
         public ProjectileCannonType Type;

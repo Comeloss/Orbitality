@@ -1,6 +1,10 @@
 ﻿using Entitas;
-using Features.Game;
-using Features.Input;
+using Features.BotsFeature;
+using Features.CannonsFeature;
+using Features.GameInfoFeature;
+using Features.InputFeature;
+using Features.SaveFeature;
+using Features.SolarSystemFeature;
 using UnityEngine;
 
 public class GameStarter : MonoBehaviour
@@ -34,10 +38,13 @@ public class GameStarter : MonoBehaviour
     
     Systems CreateSystems(Contexts contexts)
     {
-     
         // Prepare all systems
         var root = new Feature("Systems")
+            .Add(new GameInfoFeature(contexts))
             .Add(new GameplayFeature(contexts))
+            .Add(new CannonsFeature(contexts))
+            .Add(new BotsFeature(contexts))
+            .Add(new SaveLoadFeature(contexts))
             .Add(new InputFeature(contexts));
 
         return root;
